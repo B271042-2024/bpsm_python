@@ -1,5 +1,0 @@
-curl -u B271042-2024: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 https://api.github.com/user/repos -d '{"name":"bpsm_python"}'
-git remote add bpsm_python https://github.com/B271042-2024/bpsm_python.git
-git push bpsm_python master
-git commit --amend -m "241025_notes"	#[to amend the most recent commit message]
-git -u ${mypersonalGitHub_username}:${mypersonalgittoken} -X DELETE https://api.github.com/repos/${mypersonalGitHub_username}/BPSM_Lecture06	[delete repo]
