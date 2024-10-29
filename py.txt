@@ -1,0 +1,87 @@
+1. len(string)
+2. string.count('A')
+3. string.replace('A', 't')
+	filename.read().replace("\n","")	[to remove new lines and connect them]
+4. string.upper()
+5. string.lower()
+6. string.find(string)	[find the string, show index of the first letter of the string]
+7. string[0:10]	[extract from actual position 1 to 10] 
+8. str(number)
+9. int(9.999)	[output: 9, can convert float to integer]
+10. float("6.66")	[recognize it as a float]
+11. print(string + str(number))	[concatenate string and number]
+12. print(string, number)	[able to print both string and number]
+13. list.append(string2)
+	list = [string1, string2, number]
+14. list.pop()	[to remove the last one in the list]
+15. list.remove(string)	[remove string from the list]
+16. open("filename.py".read())	[no print, hence it will print out the new lines with '\n']
+	print(open("filename.py").read())	[to open the file, read/display it, with lines]
+	print(open("filename.py").read().rstrip("\n"))	[to remove the default (?) last line that is empty]
+17. once done,
+	filenamevariable.close()
+18. variable = filename.read().split()	[separate each line into a list]
+
+19. myfile = open("filename","w")
+	myfile.write("Today is Friday.")	[output: 16 (no. of chars), write this to the file]
+	len("Today is Friday.")	[output: 16]
+	
+	myfile	[check if file is connected or open to read/edit]
+	myfile.close()	[close the connection once done editing]
+
+	open("filename").read()	[to open and read the file]
+
+	myfile = open("filename". "a")	[reopen and append a to it, a = append mode]
+	myfile	[to check connectivity and mode = a]
+	myfile.write("Still Friday." + "\n")	[output: 14, to append, \n, \t, etc.]
+
+	myfile.close()	[to close the file]
+
+	with open("file") as myfile:
+		myfile_contents = myfile.read()
+		myfile_contents
+	[another way of opening the file, without having to close it again]
+
+	with open("filename", "w") as myfile:
+		myfile.write("\ntext")
+	[another way of writing to a file]
+
+20. import os	[to navigate in the directory]
+	os.getcwd()	[~pwd]
+	os.chdir(os.environ['HOME'])
+	os.chdir('/home/s2704130/BPSM/241022_python')
+	os.listdir()	[list all files and folders in the directory]
+	>>> dir()
+['__annotations__', '__builtins__', '__doc__', '__loader__', '__name__', '__package__', '__spec__', 'os']
+	len(os.listdir())	[no. of files in the directory]
+	os.listdir()[0]	[list the first file in the directory]
+	print("\n".join(os.listdir()[0:6]))	[join the new line to the list]
+	print("\n".join(sorted(os.listdir()[0:6])))     [join the new line to the list and sort]
+	
+	os.rename("oldfilename","newfilename")
+	os.mkdir("newfoldername")	[can put path in it as well, just put in the format of /df/df/../filename]
+	os.makedirs("parent1/parent2/folder")	[create a nested folders (subs-)]
+	
+	[to invoke linux command, use os.system]
+	os.system("ls -alRt parent1")	[to check the files/folders in the parent1 to its subs-, by calling bash command in python]	
+
+	os.makedirs("foop/boop/bar", exist_ok=True)	[if you'd like to make the same nested directories again]
+	os.remove("filename")	[delete filename]
+	os.rmdir("folder")	[delete directory]
+		
+
+21. import shutil	[shell utilities]
+	shutil.copy("original.txt","copy.txt")
+	shutil.copytree("oridir","copydir")
+	shutil.rmtree("folder")	[remove folder and everything inside]
+	
+22. import subprocess
+	subprocess.call("chmod 700 MyFruityScript.py", shell=True)	[to change file permission, using bash commands]
+
+23. yourname = input("Enter your name:\n")	[i write: adriana]
+	yourname	[adriana]
+
+24. import os, sys	[can write all in 1 line]
+	firstargument = sys.argv[1]	[to run, python3 pythonscript.py fruit vege]
+	secondargument = sys.argv[2]	
+	

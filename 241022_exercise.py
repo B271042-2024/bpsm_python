@@ -8,7 +8,7 @@ baset = dna.count("T")
 final = (basea + baset) / len(dna)
 print(basea)
 print(baset)
-print(final)
+print(str(final)+", or " + str(int(final*100)) + "%")
 
 #2
 base1 = dna.replace("A","t")
