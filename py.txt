@@ -85,3 +85,35 @@
 	firstargument = sys.argv[1]	[to run, python3 pythonscript.py fruit vege]
 	secondargument = sys.argv[2]	
 	
+25. somecolours1=['red','blue','green']
+	set(somecolours1)	output, no repeats: {'blue', 'red', 'green'}
+	list(set(somecolours1)) output: ['green', 'red', 'blue']
+	somecolours1.count('green')	output: 1
+	somecolours1.index('green')	output: 2
+	sorted((set(somecolours2)))	output: ['blue', 'green', 'red']
+
+26. list.append(item)	[append in the end]
+	list.insert(index, item)
+	list.remove(item)
+	list.sort()
+	list.reverse()
+	list.pop(index)	[removes the end bit in the list]
+	len(list)	
+	list(range(0,10,2))	output, 0to9, by2: [0, 2, 4, 6, 8]
+
+
+	sentence1 = 'one two three four'
+	sentence1.split()	output: ['one', 'two', 'three', 'four']
+	sentence1.split('t')	output: ['one ', 'wo ', 'hree four']
+	''.join(sentence1.split('t'))	output: 'one wo hree four'
+	
+	sentence2 = 'one\ntwo\nthree\nfour'
+	sentence2.split()	output: ['one', 'two', 'three', 'four']
+
+	import pandas
+	from pandas.core.common import flatten
+	list(flatten(variable))	output: ['red','blue'] from ['red',['blue']]
+	
+27. ['yellow'] + col	output: ['yellow', 'red', 'blue', 'green']
+28. import string
+	string.ascii_lowercase	output: 'abcdefghijklmnopqrstuvwxyz'
